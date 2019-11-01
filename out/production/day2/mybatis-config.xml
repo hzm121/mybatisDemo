@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="jdbc.properties"></properties>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <package name="pojo"/>
+    </typeAliases>
+<!--    <typeHandlers>-->
+<!--        <package name="typeHandler"/>-->
+<!--    </typeHandlers>-->
+    <environments default="dev">
+        <environment id="dev">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="url" value="${database.url}"/>
+                <property name="driver" value="${database.driver}"/>
+                <property name="password" value="${database.password}"/>
+                <property name="username" value="${database.username}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="mappers"/>
+    </mappers>
+</configuration>
