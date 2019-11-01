@@ -10,9 +10,9 @@
     <typeAliases>
         <package name="pojo"/>
     </typeAliases>
-    <typeHandlers>
-        <package name="typeHandler"/>
-    </typeHandlers>
+<!--    <typeHandlers>-->
+<!--        <package name="typeHandler"/>-->
+<!--    </typeHandlers>-->
     <environments default="dev">
         <environment id="dev">
             <transactionManager type="JDBC"></transactionManager>

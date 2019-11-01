@@ -18,7 +18,7 @@ public class DemoMain {
             UserMapper mapper = sqlSession.getMapper(UserMapper.class);
             User user = mapper.getUser(1L);
             sqlSession.commit();
-            logger.info(user.toString());
+            logger.info(user.getSex().toString());
         } catch (Exception e) {
             e.printStackTrace();
             sqlSession.rollback();

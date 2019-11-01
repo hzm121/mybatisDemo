@@ -11,7 +11,7 @@ public enum SexEnum {
         this.name = name;
         this.id = id;
     }
-    SexEnum getEnum(int id){
+    public static SexEnum getEnum(int id){
         for (SexEnum sex: SexEnum.values()
              ) {
             if (sex.id == id){

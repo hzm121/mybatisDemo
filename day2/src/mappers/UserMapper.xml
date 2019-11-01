@@ -10,9 +10,14 @@
         <result property="mobile" column="mobile"></result>
         <result property="tel" column="tel"></result>
         <result property="email" column="email"></result>
-        <result property="sex" column="sex"typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler" ></result>
+<!--        <result property="sex" column="sex" typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler"></result>-->
+
+<!--        <result property="sex" column="sex" typeHandler="org.apache.ibatis.type.EnumTypeHandler"></result>-->
+            <result property="sex" column="sex" typeHandler="typeHandler.SexEnumTypeHandler" ></result>
+
     </resultMap>
-<select id="getUser" parameterType="long" resultMap="userMap" >
+
+    <select id="getUser" parameterType="long" resultMap="userMap">
     select  id,user_name,tel,mobile,email,note,sex,password from t_user where id = #{id};
 </select>
 </mapper>
